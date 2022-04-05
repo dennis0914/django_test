@@ -5,7 +5,12 @@
     <p>This is about page</p>
     <p>
         {{my_text}}
-        {\n}
         {{my_number}}
+        <ul>
+            {% for my_sub_item in my_list %}
+            <li>{{forloop.counter}} - {{my_sub_item}}</li>
+            {% endfor %}
+        </ul>
+
     </p>
 {% endblock %}
